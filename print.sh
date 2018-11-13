@@ -54,7 +54,7 @@ function verify_user_permission(){
     echo $1
     if [ ${!user} -gt 0 ]; then
 	# call lp
-	echo "lp $options"
+	lp $options
 	log $total_pages $filename
 	# update quota for user
 	updated_quota=`expr ${!user} - $total_pages`
